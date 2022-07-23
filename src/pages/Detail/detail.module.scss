@@ -1,0 +1,21 @@
+.button {
+  padding: 0 1rem;
+  background-color: var(#{--background-color});
+  box-shadow: var(#{--shadow});
+  line-height: 2.5;
+  border-radius: var(#{--radius});
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(#{--text-color});
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    box-shadow: var(#{--shadow-hover});
+  }
+  &:active {
+    transform: scale(0.9);
+    transition: 0.2s all ease-in-out;
+  }
+}

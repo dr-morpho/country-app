@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+//Dark mood:
+$background-dark: hsl(207, 26%, 17%);
+$text-light: hsl(0, 0%, 100%);
+//light mood:
+$background-light: hsl(0, 0%, 98%);
+$text-dark: hsl(200, 15%, 8%);
+
+//SASS var:
+$family-font: 'Nunito';
+$light: 300;
+$normal: 600;
+$bold: 700;
+$radius: 10px;
+$shadow: 0px 1px 15px rgba(156, 163, 170, 0.3);
+$shadow-hover: 0px 1px 7px rgba(81, 87, 94, 0.3);
+
+//CSS var:
+:root {
+  --background-color: #{$background-light};
+  --text-color: #{$text-dark};
+  --family-font: #{$family-font};
+  --light: #{$light};
+  --normal: #{$normal};
+  --bold: #{$bold};
+  --radius: #{$radius};
+  --shadow: #{$shadow};
+  --shadow-hover: #{$shadow-hover};
+}
+
+body[theme='dark'] {
+  --background-color: #{$background-dark};
+  --text-color: #{$text-light};
+}
+
+body [theme='light'] {
+  --background-color: #{$background-light};
+  --text-color: #{$text-dark};
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: var(#{--family-font});
+  font-weight: var(#{--light});
+  background-color: var(#{--background-color});
+  transition: 0.2s all ease-in-out;
+}

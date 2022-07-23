@@ -1,0 +1,40 @@
+.container {
+  overflow: hidden;
+  box-shadow: var(#{--shadow});
+  background-color: var(#{--background-color});
+  border-radius: var(#{--radius});
+  max-width: 230px;
+  width: 100%;
+  cursor: pointer;
+  color: var(#{--text-color});
+  transition: 0.2s all ease-in-out;
+  &:hover {
+    transform: scale(1.06);
+    transition: 0.2s all ease-in-out;
+    box-shadow: var(#{--shadow-hover});
+  }
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 150px;
+  box-shadow: var(#{--shadow});
+}
+
+.cardbody {
+  padding: 1rem;
+  h3 {
+    margin-bottom: 10px;
+  }
+  span {
+    font-weight: var(#{--normal});
+  }
+}
+.list > li {
+  margin-bottom: 5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

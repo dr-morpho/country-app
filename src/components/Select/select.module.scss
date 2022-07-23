@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+  transition: 0.2 all ease-in-out;
+  p {
+    font-weight: var(#{--normal});
+  }
+}
+
+.popup {
+  top: 30px;
+  right: 0;
+  position: absolute;
+  box-shadow: var(#{--shadow});
+  border-radius: var(#{--radius});
+  background-color: var(#{--background-color});
+  color: var(#{--text-color});
+  padding: 10px 0;
+  width: 160px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.list {
+  padding-left: 15px;
+  margin-bottom: 5px;
+  transition: 0.2s all ease-in-out;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    transition: 0.2s all ease-in-out;
+    opacity: 0.6;
+  }
+}
+
+.sortby {
+  color: var(#{--text-color});
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
