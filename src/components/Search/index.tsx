@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoSearch } from 'react-icons/io5';
+import { IoSearchOutline } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { setSearch } from '../../redux/slices/sortSlice';
 import styles from './search.module.scss';
@@ -30,11 +30,10 @@ const Search: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <IoSearch />
+      <IoSearchOutline />
       <input
         className={styles.container__input}
         placeholder="Search country"
-        type="search"
         onChange={changeSearch}
         value={localSearch}
       />

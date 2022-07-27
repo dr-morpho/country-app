@@ -9,7 +9,7 @@ import 'normalize-scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/country-app">
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <App />

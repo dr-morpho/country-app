@@ -5,7 +5,11 @@ import styles from './header.module.scss';
 import wrapper from '../../styles/wrapper.module.scss';
 
 const Header: React.FC = () => {
-  const [mood, setMood] = React.useState('light');
+  const [mood, setMood] = React.useState('');
+
+  React.useEffect(() => {
+    setMood('light');
+  }, []);
 
   const changeMood = () => {
     setMood(mood === 'light' ? 'dark' : 'light');
@@ -24,32 +28,15 @@ const Header: React.FC = () => {
     window.localStorage.setItem('MOOD_VALUE', JSON.stringify(mood));
   }, [mood]);
 
-  const whatMood = () => {
-    if (mood === 'light') {
-      return (
-        <>
-          <IoSunnyOutline size="16px" />
-          <span>Light theme</span>
-        </>
-      );
-    } else if (mood === 'dark') {
-      return (
-        <>
-          <IoMoonOutline size="16px" />
-          <span>Dark theme</span>
-        </>
-      );
-    }
-  };
   return (
     <header className={styles.header}>
       <div className={wrapper.wrapper}>
         <div className={styles.header__container}>
           <Link className={styles.link} to="/">
-            Where is the world?
+            Country App
           </Link>
           <div onClick={changeMood} className={styles.theme}>
-            {whatMood()}
+            {mood === 'light' ? <IoSunnyOutline size="20px" /> : <IoMoonOutline size="20px" />}
           </div>
         </div>
       </div>
